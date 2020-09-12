@@ -1,14 +1,10 @@
 package com.test;
 
-public class Franc {
-    private int amount;
+public class Franc extends Money {
+
 
     public Franc(int amount) {
-        this.amount = amount;
-    }
-
-    public int getAmount() {
-        return amount;
+        super(amount);
     }
 
     Franc times(int multiplier){
@@ -16,9 +12,4 @@ public class Franc {
         return new Franc(amount*multiplier);
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        Franc franc = (Franc) obj;
-        return this.amount==franc.getAmount();
-    }
 }
