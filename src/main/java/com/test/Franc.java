@@ -2,14 +2,11 @@ package com.test;
 
 public class Franc extends Money {
 
-
-    public Franc(int amount) {
-        super(amount);
+    public Franc(int amount, String currency) {
+        super(amount, currency);
     }
 
-    Franc times(int multiplier){
 
-        return new Franc(amount*multiplier);
-    }
+
 
 }
